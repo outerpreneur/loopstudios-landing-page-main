@@ -29,21 +29,65 @@ main {
 
 .container {
   max-width: 80%;
-  margin: 0 auto;
 }
 
 header {
   position: absolute;
-  background-color: aqua;
   z-index: 1;
   width: 100%;
   margin: 0 auto;
   left: -50%;
   right: -50%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  color: var(--White);
+  display: flex;
+  gap: 2em;
+  font-family: var(--font-family-alata);
+}
+
+/* .utilities */
+.centered {
+  margin: 0 auto;
+}
+
+/* menu links */
+
+.desktop-menu a {
+  position: relative;
+  cursor: pointer;
+  color: var(--White);
+  font-size: 1.2em;
+}
+
+.desktop-menu a {
+  color: var(--White);
+}
+
+.desktop-menu a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--White);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.desktop-menu a:hover::before {
+  transform: scaleX(1);
 }
 
 /* sections */
-
+/* section 1 */
 .intro-section {
   background-image: linear-gradient(
       to bottom,
@@ -56,4 +100,257 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-tag {
+  text-transform: uppercase;
+  color: var(--White);
+  font-family: var(--font-family-josefin);
+  font-size: 3.5em;
+  font-weight: 300;
+  border: 1px solid white;
+  padding: 1.2em;
+  width: 60%;
+}
+
+.main-tag h1 {
+  width: 100%;
+}
+
+/* section 2 */
+.about-section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.section-2-container {
+  position: relative;
+  width: 100%;
+}
+/* 
+.section-2-container img {
+  object-fit: contain;
+} */
+
+.interactive-text {
+  background-color: var(--White);
+  padding: 7em;
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.section-2-container img {
+  width: 800px;
+}
+
+.interactive-text h2 {
+  font-family: var(--font-family-josefin);
+  text-transform: uppercase;
+  font-size: 3.4em;
+  font-weight: var(--font-weight-josefin);
+}
+
+.interactive-text p {
+  line-height: 2;
+  font-family: var(--font-family-josefin);
+}
+
+/* section 3 */
+
+.grid-section {
+  min-height: 100%;
+}
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  margin-bottom: 10em;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-row h2 {
+  font-size: 3.4em;
+  text-transform: uppercase;
+  font-family: var(--font-family-josefin);
+  font-weight: var(--font-weight-josefin);
+}
+
+.grid-row button {
+  background-color: var(--Black);
+  color: var(--White);
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: var(--font-family-josefin);
+  padding: 5px 45px;
+  border: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.grid-item {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  padding: 2em;
+  color: var(--White);
+  text-transform: uppercase;
+  font-family: var(--font-family-josefin);
+  font-size: 2em;
+  font-weight: var(--font-weight-josefin);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.grid-item:hover {
+  filter: brightness(1.5);
+}
+
+#item1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-deep-earth.jpg);
+}
+
+#item2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-night-arcade.jpg);
+}
+
+#item3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-soccer-team.jpg);
+}
+
+#item4 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-grid.jpg);
+}
+
+#item5 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-from-above.jpg);
+}
+
+#item6 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-pocket-borealis.jpg);
+}
+
+#item7 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-curiosity.jpg);
+}
+
+#item8 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
+    ),
+    url(./images/desktop/image-fisheye.jpg);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--Black);
+  width: 100%;
+  color: var(--White);
+  padding: 3.5em 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-areas:
+    "footer1 footer3"
+    "footer2 footer4";
+  gap: 2.5em;
+}
+
+.social-media,
+.copyright {
+  justify-self: end;
+}
+
+.footer-logo {
+  grid-area: footer1;
+}
+
+footer nav {
+  grid-area: footer2;
+  display: flex;
+  gap: 2em;
+  font-family: var(--font-family-alata);
+}
+
+.social-media {
+  grid-area: footer3;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-media img {
+  width: 30px;
+}
+
+.copyright {
+  grid-area: footer4;
+  font-family: var(--font-family-josefin);
+  color: var(--Dark-Gray);
 }
