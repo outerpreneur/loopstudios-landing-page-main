@@ -193,13 +193,19 @@ header nav {
 }
 
 .grid-row button {
-  background-color: var(--Black);
-  color: var(--White);
+  background-color: var(--White);
+  color: var(--Black);
+  border: 1px solid var(--Black);
   text-transform: uppercase;
   font-size: 1.2em;
   font-family: var(--font-family-josefin);
   padding: 5px 45px;
-  border: none;
+  cursor: pointer;
+}
+
+.grid-row button:hover {
+  background-color: var(--Black);
+  color: var(--White);
 }
 
 .gallery-grid {
