@@ -378,7 +378,7 @@ footer nav {
     padding: 0.5em;
   }
   .main-tag h1 {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
   .section-2-container img {
     width: 100%;
@@ -392,11 +392,11 @@ footer nav {
   }
 
   .interactive-text h2 {
-    font-size: 2.3em;
+    font-size: 2em;
     line-height: 1.2;
   }
   .grid-row {
-    justify-content: center;
+    justify-content: center !important;
   }
 
   .grid-row h2 {
