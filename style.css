@@ -497,7 +497,8 @@ footer nav {
     line-height: 1.2;
   }
   .grid-row {
-    justify-content: center !important;
+    justify-content: center;
+    text-align: center;
   }
 
   .grid-row h2 {
